@@ -1,8 +1,8 @@
 nav {
-    width: 100vw;
+    width: 100%;
     height: 70px;
 
-    background: #3f3f3f;
+    background: #000000;
 }
 
 .nav-container {
@@ -21,16 +21,12 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    background: #c4c4c4;
 }
 
 .menu-left {
     display: flex;
     align-items: center;
     justify-content: space-around;
-
-    background: #442b2b;
 
     width: 30%;
     height: 100%;
@@ -41,8 +37,6 @@ nav {
 }
 
 .nav-items-left {
-    background: blue;
-
     width: 50%;
     height: 100%;
 }
@@ -62,8 +56,6 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
-
-    background: red;
 
     width: 50%;
     height: 100%;
