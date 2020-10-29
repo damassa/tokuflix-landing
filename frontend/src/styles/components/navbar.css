@@ -3,6 +3,9 @@ nav {
     height: 70px;
 
     background: #000000;
+
+    position: sticky;
+    top: 0;
 }
 
 .nav-container {
@@ -15,7 +18,7 @@ nav {
 }
 
 .nav-content {
-    width: 90%;
+    width: 85%;
     height: 98%;
 
     display: flex;
@@ -26,19 +29,20 @@ nav {
 .menu-left {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-start;
 
     width: 30%;
     height: 100%;
 }
 
 .nav-logo {
-    background: yellow;
+    background: lightsalmon;
 }
 
 .nav-items-left {
     width: 50%;
     height: 100%;
+    margin-left: 40px;
 }
 
 .nav-items-left ul {
@@ -55,8 +59,78 @@ nav {
 .menu-right {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-end;
 
     width: 50%;
     height: 100%;
+}
+
+.menu-right .nav-searchbox {
+    margin-right: 50px;
+}
+
+.menu-right .nav-searchbox input[type="text"] {
+    background: url("../../images/search.svg") #000000 no-repeat;
+    background-position: right;
+
+    width: 300px;
+
+    border: none;
+    border-bottom: solid 1px #ffffff;
+    padding: 10px 10px 10px 20px;
+    color: #ffffff;
+    font-size: 15px;
+    outline: none;
+}
+
+.menu-right .user-arrow {
+    margin-left: 5px;
+}
+
+.user-options {
+    width: 180px;
+    height: 120px;
+
+    background: #000000 !important;
+    border: 1px solid #505050;
+
+    margin-top: 10px;
+    
+    padding: 2px;
+}
+
+.user-options .user-options-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.user-options .user-options-container strong {
+    color: #ffffff;
+    width: 100%;
+    padding: 5px 20px 10px 20px;
+    font-size: 20px;
+}
+
+.user-options .user-options-container .user-options-content {
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    padding: 20px;
+}
+
+.user-options .user-options-container .user-options-content a {
+    width: 100%;
+    height: 20px;
+
+    text-decoration: none;
+    font-size: 14px;
+    color: #cccccc;
+    transition: .2s;
+}
+
+.user-options .user-options-container .user-options-content a:hover {
+    font-size: 15px;
+    transition: .2s;
 }
