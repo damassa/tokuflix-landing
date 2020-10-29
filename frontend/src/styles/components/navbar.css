@@ -70,21 +70,19 @@ nav {
 }
 
 .menu-right .nav-searchbox input[type="text"] {
-    background: url("../../images/search.svg") #000000 no-repeat;
-    background-position: right;
-
     width: 300px;
 
-    border: none;
-    border-bottom: solid 1px #ffffff;
-    padding: 10px 10px 10px 20px;
+    border-bottom: 1px solid #ffffff;
     color: #ffffff;
     font-size: 15px;
-    outline: none;
 }
 
 .menu-right .user-arrow {
     margin-left: 5px;
+}
+
+.menu-right .nav-user {
+    margin-top: 5px;
 }
 
 .user-options {

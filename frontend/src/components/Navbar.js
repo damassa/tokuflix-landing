@@ -3,10 +3,13 @@ import React, { useState } from 'react';
 import Popper from '@material-ui/core/Popper';
 import Fade from '@material-ui/core/Fade';
 import Paper from '@material-ui/core/Paper';
+import InputAdornment from '@material-ui/core/InputAdornment';
+import TextField from '@material-ui/core/TextField';
 
 import useStyles from './styles';
 
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import SearchIcon from '@material-ui/icons/Search';
 import arrow from '../images/arrow-down.svg';
 
 import '../styles/components/navbar.css';
@@ -41,10 +44,21 @@ export default function Navbar() {
                     </div>
                     <div className="menu-right">
                         <div className="nav-searchbox">
-                            <input type="text" placeholder="O que estamos procurando?"/>
-                        </div>
+                            <TextField
+                                className={classes.margin}
+                                id="input-with-icon-textfield"
+                                placeholder="O que estamos procurando?"
+                                InputProps={{
+                                    endAdornment: (
+                                        <InputAdornment position="start">
+                                            <SearchIcon style={{color: '#ffffff'}} />
+                                        </InputAdornment>
+                                    )
+                                }}
+                            />
+                        </div> 
                         <div className="nav-user">
-                            <AccountCircleIcon/>
+                            <AccountCircleIcon />
                             <img 
                                 src={arrow} 
                                 alt="user" 
