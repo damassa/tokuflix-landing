@@ -10,7 +10,6 @@ import useStyles from './styles';
 
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import SearchIcon from '@material-ui/icons/Search';
-import arrow from '../images/arrow-down.svg';
 
 import '../styles/components/navbar.css';
 
@@ -58,13 +57,7 @@ export default function Navbar() {
                             />
                         </div> 
                         <div className="nav-user">
-                            <AccountCircleIcon />
-                            <img 
-                                src={arrow} 
-                                alt="user" 
-                                onMouseOver={handleClick('bottom-start')}
-                                className="user-arrow"
-                            />
+                            <AccountCircleIcon onMouseOver={handleClick('bottom-start')} />
                             <Popper
                                 open={open} 
                                 anchorEl={anchorEl} 
