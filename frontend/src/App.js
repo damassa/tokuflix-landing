@@ -12,7 +12,7 @@ import './styles/global.css';
 const theme = createMuiTheme({
   palette: {
       secondary: {
-          main: '#E33E7F'
+          main: '#240649'
       }
   }
 });

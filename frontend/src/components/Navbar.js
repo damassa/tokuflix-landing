@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+
 import Popper from '@material-ui/core/Popper';
 import Fade from '@material-ui/core/Fade';
 import Paper from '@material-ui/core/Paper';
@@ -44,8 +45,9 @@ export default function Navbar() {
                     <div className="menu-right">
                         <div className="nav-searchbox">
                             <TextField
+                                color="secondary"
                                 className={classes.margin}
-                                id="input-with-icon-textfield"
+                                id="input-with-icon-tex tfield"
                                 placeholder="O que estamos procurando?"
                                 InputProps={{
                                     endAdornment: (
