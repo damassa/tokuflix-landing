@@ -5,10 +5,10 @@
 }
 
 body {
-    background: #403546;
-    color: #ffffff;
+    background: #E6E6FA;
 }
 
 body, input {
     font: 600 18px Overpass, sans-serif;
+    color: #ffffff
 }

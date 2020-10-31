@@ -6,13 +6,13 @@ import Fade from '@material-ui/core/Fade';
 import Paper from '@material-ui/core/Paper';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import TextField from '@material-ui/core/TextField';
-
-import useStyles from './styles';
-
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import SearchIcon from '@material-ui/icons/Search';
 
+import useStyles from './styles';
+
 import '../styles/components/navbar.css';
+import logo from '../images/logo-final.png'
 
 export default function Navbar() {
     const [anchorEl, setAnchorEl] = useState(null);
@@ -33,7 +33,10 @@ export default function Navbar() {
                 <div className="nav-content">
                     <div className="menu-left">
                         <div className="nav-logo">
-                            LOGO
+                            <div className="nav-logo-content">
+                                {/* <img src={logo} alt=""/> */}
+                                LOGO
+                            </div>
                         </div>
                         <div className="nav-items-left">
                             <ul>

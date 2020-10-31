@@ -2,7 +2,7 @@ nav {
     width: 100%;
     height: 70px;
 
-    background: #000000;
+    background: #131313;
 
     position: sticky;
     top: 0;
@@ -37,6 +37,10 @@ nav {
 
 .nav-logo {
     background: lightsalmon;
+}
+
+.nav-logo .nav-logo-content {
+    
 }
 
 .nav-items-left {
@@ -78,7 +82,7 @@ nav {
 }
 
 .menu-right .nav-user {
-    margin-top: 8   px;
+    margin-top: 8px;
 }
 
 .user-options {
