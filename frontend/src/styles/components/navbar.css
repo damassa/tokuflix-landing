@@ -81,6 +81,11 @@ nav {
     font-size: 15px;
 }
 
+.MuiInput-underline:before {
+    background: none !important;
+    border: none !important;
+}
+
 .menu-right .nav-user {
     margin-top: 8px;
 }
@@ -89,7 +94,7 @@ nav {
     width: 180px;
     height: 120px;
 
-    background: #000000 !important;
+    background: #131313 !important;
     border: 1px solid #505050;
 
     margin-top: 10px;
