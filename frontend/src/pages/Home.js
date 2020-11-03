@@ -1,17 +1,15 @@
 import React from 'react';
+import Grid from '@material-ui/core/Grid';
+
 import SerieCard from '../components/SerieCard';
 
 import '../styles/pages/home.css';
 
 function Home() {
     return(
-        <div id="home">
-            <div className="home-wrapper">
-                <main>
-                    <SerieCard />
-                </main>
-            </div>
-        </div>
+        <Grid container justify="space-around" className="home">
+            <SerieCard />
+        </Grid>        
     );
 }
 
