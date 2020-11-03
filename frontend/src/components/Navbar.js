@@ -1,25 +1,24 @@
 import React, { useState } from 'react';
+import {
+    Popper, 
+    Fade,
+    Paper,
+    Grid,
+    Hidden,
+    TextField,
+    InputAdornment
+} from '@material-ui/core';
 
-
-import Popper from '@material-ui/core/Popper';
-import Fade from '@material-ui/core/Fade';
-import Paper from '@material-ui/core/Paper';
-import InputAdornment from '@material-ui/core/InputAdornment';
-import TextField from '@material-ui/core/TextField';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import SearchIcon from '@material-ui/icons/Search';
 
-import useStyles from './styles';
-
 import '../styles/components/navbar.css';
-import logo from '../images/logo-final.png'
 
 export default function Navbar() {
     const [anchorEl, setAnchorEl] = useState(null);
     const [open, setOpen] = useState(false);
     const [placement, setPlacement] = useState();
 
-    const classes = useStyles();
 
     const handleClick = (newPlacement) => (event) => {
         setAnchorEl(event.currentTarget);
@@ -28,65 +27,59 @@ export default function Navbar() {
     };
 
     return(
-        <nav>
-            <div className="nav-container">
-                <div className="nav-content">
-                    <div className="menu-left">
-                        <div className="nav-logo">
-                            <div className="nav-logo-content">
-                                {/* <img src={logo} alt=""/> */}
-                                LOGO
-                            </div>
-                        </div>
-                        <div className="nav-items-left">
-                            <ul>
-                                <li>Séries</li>
-                                <li>Favoritos</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div className="menu-right">
-                        <div className="nav-searchbox">
-                            <TextField
-                                color="secondary"
-                                className={classes.margin}
-                                id="input-with-icon-tex tfield"
-                                placeholder="O que estamos procurando?"
-                                InputProps={{
-                                    endAdornment: (
-                                        <InputAdornment position="start">
-                                            <SearchIcon style={{color: '#ffffff'}} />
-                                        </InputAdornment>
-                                    )
-                                }}
-                            />
-                        </div> 
-                        <div className="nav-user">
-                            <AccountCircleIcon onMouseOver={handleClick('bottom-start')} />
-                            <Popper
-                                open={open} 
-                                anchorEl={anchorEl} 
-                                placement={placement} 
-                                transition
-                            >
-                                {({ TransitionProps }) => (
-                                    <Fade {...TransitionProps} timeout={350}>
-                                        <Paper className="user-options">
-                                            <div className="user-options-container">
-                                                <strong>Damassa</strong>
-                                                <div className="user-options-content">
-                                                    <a href="#">Minha conta</a>
-                                                    <a href="#">Sair</a>
-                                                </div>
+        <Grid container className="nav" alignItems="center" justify="space-between">
+            <Grid item container xs={12} sm={12} md={6}>
+                <Grid item xs={3} sm={3} className="navMenuLeftLogo">LOGO</Grid>
+                <Grid item xs={9} sm={9}>
+                    <Grid container justify="flex-start">
+                        <Grid item xs={4} className="navMenuLeftItem">Séries</Grid>
+                        <Grid item xs={4} className="navMenuLeftItem">Favoritos</Grid>
+                    </Grid>
+                </Grid>
+            </Grid>
+            <Hidden smDown>
+                <Grid item container xs={12} sm={6} md={6} justify="flex-end">
+                    <Grid item xs={6} className="navMenuRightItem">
+                        <TextField
+                            className="navSearchbox"
+                            color="secondary"
+                            id="input-with-icon-textfield"
+                            placeholder="O que estamos procurando?"
+                            fullWidth
+                            InputProps={{
+                                endAdornment: (
+                                    <InputAdornment position="start">
+                                        <SearchIcon style={{color: '#ffffff'}} />
+                                    </InputAdornment>
+                                )
+                            }}
+                        />
+                    </Grid>
+                    <Grid item xs={6} className="navMenuRightItem">
+                        <AccountCircleIcon onClick={handleClick('bottom')} />
+                        <Popper
+                            open={open} 
+                            anchorEl={anchorEl} 
+                            placement={placement} 
+                            transition
+                        >
+                            {({ TransitionProps }) => (
+                                <Fade {...TransitionProps} timeout={350}>
+                                    <Paper className="user-options">
+                                        <div className="user-options-container">
+                                            <strong>Damassa</strong>
+                                            <div className="user-options-content">
+                                                <a href="#">Minha conta</a>
+                                                <a href="#">Sair</a>
                                             </div>
-                                        </Paper>
-                                    </Fade>
-                                )}
-                            </Popper>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
+                                        </div>
+                                    </Paper>
+                                </Fade>
+                            )}
+                        </Popper>
+                    </Grid>
+                </Grid>
+            </Hidden>
+        </Grid>
     );
 }

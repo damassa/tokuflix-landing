@@ -1,93 +1,29 @@
-nav {
-    width: 100%;
-    height: 70px;
-
+.nav {
+    height: 80px;
     background: #131313;
-
-    position: sticky;
-    top: 0;
 }
 
-.nav-container {
-    width: 100%;
-    height: 100%;
+.navMenuLeftLogo {
+    display: flex;
+    justify-content: center;
+}
 
+.navMenuLeftItem {
+    text-align: center;
+}
+
+.navMenuRightItem {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.nav-content {
-    width: 85%;
-    height: 98%;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.menu-left {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-
-    width: 30%;
-    height: 100%;
-}
-
-.nav-logo {
-    background: lightsalmon;
-}
-
-.nav-logo .nav-logo-content {
-    
-}
-
-.nav-items-left {
-    width: 50%;
-    height: 100%;
-    margin-left: 40px;
-}
-
-.nav-items-left ul {
-    list-style-type: none;
-
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.menu-right {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-
-    width: 50%;
-    height: 100%;
-}
-
-.menu-right .nav-searchbox {
-    margin-right: 50px;
-}
-
-.menu-right .nav-searchbox input[type="text"] {
-    width: 300px;
-
-    border-bottom: 1px solid #ffffff;
-    color: #ffffff;
-    font-size: 15px;
-}
-
 .MuiInput-underline:before {
-    background: none !important;
-    border: none !important;
+    border-bottom: 1px solid #c4c4c4 !important;
 }
 
-.menu-right .nav-user {
-    margin-top: 8px;
+.navSearchbox input {
+    color: #c4c4c4;
 }
 
 .user-options {
