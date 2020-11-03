@@ -1,3 +1,11 @@
 .home {
-    margin-top: 30px;
+    margin-top: 15px;
+}
+
+.homeTitle {
+    height: 100px;
+    font-size: 30pt;
+    color: #131313;
+    display: flex;
+    align-items: center;
 }

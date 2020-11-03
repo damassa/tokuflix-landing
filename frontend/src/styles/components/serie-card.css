@@ -1,8 +1,9 @@
 .serie-card {
     width: 200px;
-    height: 350px;
+    height: fit-content;
 
-    margin: 15px 35px;
+    margin: 15px 35px 35px 35px;
+    padding: 10px;
 }
 
 .serie-card .serie-image {
@@ -10,9 +11,8 @@
     height: 300px;
 
     background-size: cover;
-    object-fit: cover;
+    background-position: center;
     margin-bottom: 10px;
-    border: 1px solid #131313;
 }
 
 .serie-card h1 {
