@@ -1,9 +1,8 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 
-import SerieCard from '../components/SerieCard';
-
 import '../styles/pages/home.css';
+import Carousel from '../components/Carousel';
 
 function Home() {
     return(
@@ -11,7 +10,11 @@ function Home() {
             <Grid item xs={11} className="homeTitle">
                 Texto genérico
             </Grid>
-            <SerieCard />
+            <Carousel />
+            <Grid item xs={11} className="homeTitle">
+                Outro texto genérico
+            </Grid>
+            <Carousel />
         </Grid>        
     );
 }

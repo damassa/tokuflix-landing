@@ -12,3 +12,7 @@ body, input {
     font: 600 18px Overpass, sans-serif;
     color: #cccccc;
 }
+
+button:focus {
+    outline: none;
+}
