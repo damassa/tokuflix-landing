@@ -1,39 +1,25 @@
-import React, { useState } from 'react';
-import {
-    Popper, 
-    Fade,
-    Paper,
-    Grid,
-    Hidden,
-    TextField,
-    InputAdornment
-} from '@material-ui/core';
+import React from 'react';
 
-import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import SearchIcon from '@material-ui/icons/Search';
 
 import '../styles/components/navbar.css';
+import { Grid, Hidden, InputAdornment, TextField } from '@material-ui/core';
+import UserOptions from './UserOptions';
 
 export default function Navbar() {
-    const [anchorEl, setAnchorEl] = useState(null);
-    const [open, setOpen] = useState(false);
-    const [placement, setPlacement] = useState();
-
-
-    const handleClick = (newPlacement) => (event) => {
-        setAnchorEl(event.currentTarget);
-        setOpen((prev) => placement !== newPlacement || !prev);
-        setPlacement(newPlacement);
-    };
-
     return(
         <Grid container className="nav" alignItems="center" justify="space-between">
             <Grid item container xs={12} sm={12} md={6}>
                 <Grid item xs={3} sm={3} className="navMenuLeftLogo">LOGO</Grid>
                 <Grid item xs={9} sm={9}>
                     <Grid container justify="flex-start">
-                        <Grid item xs={4} className="navMenuLeftItem">Séries</Grid>
-                        <Grid item xs={4} className="navMenuLeftItem">Favoritos</Grid>
+                        <Grid item xs={4} className="navMenuLeftItem">
+                            Séries
+                        </Grid>
+                        {/* <Grid item xs={4} className="navMenuLeftItem">Filmes</Grid> */}
+                        <Grid item xs={4} className="navMenuLeftItem">
+                            Favoritos
+                        </Grid>
                     </Grid>
                 </Grid>
             </Grid>
@@ -55,29 +41,7 @@ export default function Navbar() {
                             }}
                         />
                     </Grid>
-                    <Grid item xs={6} className="navMenuRightItem">
-                        <AccountCircleIcon onClick={handleClick('bottom')} />
-                        <Popper
-                            open={open} 
-                            anchorEl={anchorEl} 
-                            placement={placement} 
-                            transition
-                        >
-                            {({ TransitionProps }) => (
-                                <Fade {...TransitionProps} timeout={350}>
-                                    <Paper className="user-options">
-                                        <div className="user-options-container">
-                                            <strong>Damassa</strong>
-                                            <div className="user-options-content">
-                                                <a href="#">Minha conta</a>
-                                                <a href="#">Sair</a>
-                                            </div>
-                                        </div>
-                                    </Paper>
-                                </Fade>
-                            )}
-                        </Popper>
-                    </Grid>
+                    <UserOptions/>
                 </Grid>
             </Hidden>
         </Grid>

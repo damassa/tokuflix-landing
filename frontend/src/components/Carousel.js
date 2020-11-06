@@ -40,17 +40,60 @@ const Carousel = () => {
   const settings = {
     className: 'slideStyles',
     dots: false,
-    slidesToShow: 4,
-    slidesToScroll: 1,
+    slidesToShow: 10,
+    slidesToScroll: 2,
     adaptiveHeight: true,
     autoplay: true,
     autoplaySpeed: 10000,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
+    responsive: [
+      {
+        breakpoint: 3840,
+        settings: {
+          slidesToShow: 8,
+        }
+      },
+      {
+        breakpoint: 1920,
+        settings: {
+          slidesToShow: 5,
+        }
+      },
+      {
+        breakpoint: 1600,
+        settings: {
+          slidesToShow: 4,
+        }
+      },
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 535,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
 
   return (
     <Slider {...settings}>
+      <SerieCard />
+      <SerieCard />
+      <SerieCard />
+      <SerieCard />
       <SerieCard />
       <SerieCard />
       <SerieCard />
