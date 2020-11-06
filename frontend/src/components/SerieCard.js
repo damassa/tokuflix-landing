@@ -1,17 +1,20 @@
-import { Paper } from '@material-ui/core';
+import { Grid, Paper } from '@material-ui/core';
 
 import React from 'react';
-import image from '../images/dairanger.jpg'
 
-import '../styles/components/serie-card.css';
+import useStyles from '../styles/components/serieCard';
 
 function SerieCard() {
+    const classes = useStyles();
+
     return(
-        <Paper elevation={3} className="serie-card">
-            <div className="serie-image" style={{backgroundImage: `url(${image})`}}></div>
-            <h1>Serie</h1>
-            <h2>Year</h2>
-        </Paper>
+        <Grid container justify="center">
+            <Paper elevation={3} className={classes.serieCard}>
+                <div className={classes.serieImage}/>
+                <h1>Serie</h1>
+                <h2>Year</h2>
+            </Paper>
+        </Grid>
     );
 }
 
