@@ -1,14 +1,20 @@
 import { Grid, Paper } from '@material-ui/core';
 
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 import useStyles from '../styles/components/serieCard';
 
-function SerieCard() {
+const SerieCard = () => {
     const classes = useStyles();
+    const history = useHistory();
+
+    function handleClickSerieDetail() {
+        history.push('/SerieDetail');
+    }
 
     return(
-        <Grid container justify="center">
+        <Grid container justify="center" onClick={handleClickSerieDetail}>
             <Paper elevation={3} className={classes.serieCard}>
                 <div className={classes.serieImage}/>
                 <h1>Serie</h1>
