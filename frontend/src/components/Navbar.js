@@ -3,14 +3,19 @@ import React from 'react';
 import SearchIcon from '@material-ui/icons/Search';
 
 import '../styles/components/navbar.css';
-import { Grid, Hidden, InputAdornment, TextField } from '@material-ui/core';
-import UserOptions from './UserOptions';
 
-export default function Navbar() {
+import { Grid, Hidden, InputAdornment, TextField } from '@material-ui/core';
+
+import UserOptions from './UserOptions';
+import { Link } from 'react-router-dom';
+
+const Navbar = () => {
     return(
         <Grid container className="nav" alignItems="center" justify="space-between">
             <Grid item container xs={12} sm={12} md={6}>
-                <Grid item xs={3} sm={3} className="navMenuLeftLogo">LOGO</Grid>
+                <Grid item xs={3} sm={3} className="navMenuLeftLogo">
+                    <Link className="navLogo" to="/">LOGO</Link>
+                </Grid>
                 <Grid item xs={9} sm={9}>
                     <Grid container justify="flex-start">
                         <Grid item xs={4} className="navMenuLeftItem">
@@ -47,3 +52,5 @@ export default function Navbar() {
         </Grid>
     );
 }
+
+export default Navbar;

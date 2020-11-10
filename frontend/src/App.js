@@ -1,11 +1,9 @@
 import React from 'react';
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
 
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
 
-//import Routes from './routes';
+import Routes from './routes/routes';
 
 import './styles/global.css';
 
@@ -21,8 +19,7 @@ function App() {
   return (
     <MuiThemeProvider theme={theme}>
       <div className="App">
-        <Navbar />
-        <Home />
+        <Routes />
       </div>
     </MuiThemeProvider>
   );

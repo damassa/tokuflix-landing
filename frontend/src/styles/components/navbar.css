@@ -11,6 +11,11 @@
     justify-content: center;
 }
 
+.navLogo {
+    text-decoration: none;
+    color: #cccccc;
+}
+
 .navMenuLeftItem {
     text-align: center;
 }
