@@ -1,15 +1,13 @@
-import { Grid, Hidden } from '@material-ui/core';
+import { Hidden } from '@material-ui/core';
+import SliderCard from '../components/SliderCard';
 import React from 'react';
 import Slider from 'react-slick';
 
 import '../styles/components/serieSlider';
-
 import useStyles from '../styles/components/serieSlider';
 
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
-
-import image from '../images/dairanger-big.jpeg';
 
 function SampleNextArrow(props) {
   const { className, onClick } = props;
@@ -55,30 +53,9 @@ const SerieSlider = () => {
 
   return (
     <Slider {...settings} className={classes.sliderWrapper}>
-      <Grid container className={classes.sliderContainer}>
-        <Grid item xs={6}>
-          <img src={image} alt="A" />
-        </Grid>
-        <Grid item xs={6}>
-          <h1>Dairanger</h1>
-        </Grid>
-      </Grid>
-      <Grid container className={classes.sliderContainer}>
-        <Grid item xs={6}>
-          <img src={image} alt="A" />
-        </Grid>
-        <Grid item xs={6}>
-          <h1>Dairanger</h1>
-        </Grid>
-      </Grid>
-      <Grid container className={classes.sliderContainer}>
-        <Grid item xs={6}>
-          <img src={image} alt="A" />
-        </Grid>
-        <Grid item xs={6}>
-          <h1>Dairanger</h1>
-        </Grid>
-      </Grid>
+      <SliderCard />
+      <SliderCard />
+      <SliderCard />
     </Slider>
   );
 };
