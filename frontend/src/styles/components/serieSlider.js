@@ -29,6 +29,17 @@ const useStyles = makeStyles((theme) => ({
     '& button': {
       color: '#ffffff',
       fontFamily: 'Overpass, sans-serif',
+      height: '100%',
+    },
+    [theme.breakpoints.down('md')]: {
+      width: '100%',
+    },
+  },
+  sliderButtonWrapper: {
+    display: 'flex !important',
+    flexWrap: 'nowrap',
+    [theme.breakpoints.down('md')]: {
+      justifyContent: 'space-between !important',
     },
   },
 }));
