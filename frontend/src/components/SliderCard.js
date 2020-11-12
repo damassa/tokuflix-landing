@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid } from '@material-ui/core';
+import { Grid, Button } from '@material-ui/core';
 
 import useStyles from '../styles/components/serieSlider';
 
@@ -20,9 +20,13 @@ const SliderCard = () => {
         <Grid item xs={12}>
           <p>Um baita texto falando da série.</p>
         </Grid>
-        <Grid item xs={12}>
-          <button>Assistir</button>
-          <button>Adicionar aos favoritos</button>
+        <Grid item xs={12} className={classes.sliderButton}>
+          <Button variant="contained" color="secondary">
+            Assistir
+          </Button>
+          <Button variant="contained" color="primary">
+            Adicionar aos Favoritos
+          </Button>
         </Grid>
       </Grid>
     </Grid>

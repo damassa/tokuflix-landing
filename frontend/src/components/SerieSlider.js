@@ -56,6 +56,8 @@ const SerieSlider = () => {
       <SliderCard />
       <SliderCard />
       <SliderCard />
+      <SliderCard />
+      <SliderCard />
     </Slider>
   );
 };

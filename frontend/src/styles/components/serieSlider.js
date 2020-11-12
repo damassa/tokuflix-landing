@@ -12,9 +12,9 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex !important',
   },
   sliderCardInfo: {
-    padding: 15,
+    padding: '0 15px',
     '& h1': {
-      color: '#363E48',
+      color: '#131313',
       fontWeight: 'bold',
       fontSize: '30pt',
     },
@@ -22,7 +22,14 @@ const useStyles = makeStyles((theme) => ({
       color: '#363E48',
       fontSize: 18,
     },
-    '& button': {},
+  },
+  sliderButton: {
+    display: 'flex',
+    alignItems: 'flex-end',
+    '& button': {
+      color: '#ffffff',
+      fontFamily: 'Overpass, sans-serif',
+    },
   },
 }));
 
