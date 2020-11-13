@@ -10,6 +10,7 @@ const useStyles = makeStyles((theme) => ({
   },
   sliderCard: {
     display: 'flex !important',
+    justifyContent: 'center',
   },
   sliderCardInfo: {
     padding: '0 15px',
@@ -21,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
     '& p': {
       color: '#363E48',
       fontSize: 18,
+      textAlign: 'justify',
     },
   },
   sliderButton: {
