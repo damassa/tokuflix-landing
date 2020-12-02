@@ -10,7 +10,7 @@ export default function SliderCard() {
 
   return (
     <Grid container className={classes.sliderCard} justify="space-between">
-      <Grid item lg={6} md={12}>
+      <Grid item lg={6} xs={12}>
         <img src={image} alt="A" />
       </Grid>
       <Grid item container lg={6} md={12} className={classes.sliderCardInfo}>
@@ -28,14 +28,14 @@ export default function SliderCard() {
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
         </Grid>
-        <Grid item lg={12} className={classes.sliderButton}>
+        <Grid item lg={7} xs={12} className={classes.sliderButton}>
           <Grid container className={classes.sliderButtonWrapper}>
-            <Grid item lg={2} md={6}>
+            <Grid item md={4} xs={6}>
               <Button fullWidth variant="contained" color="secondary">
                 Assistir
               </Button>
             </Grid>
-            <Grid item lg={5} md={6}>
+            <Grid item md={5} xs={6}>
               <Button fullWidth variant="contained" color="primary">
                 Favoritar
               </Button>

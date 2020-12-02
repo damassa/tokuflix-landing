@@ -3,7 +3,6 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
   sliderWrapper: {
     width: '95%',
-    height: 'fit-content',
     '& img': {
       width: '100%',
     },
@@ -24,6 +23,10 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 18,
       textAlign: 'justify',
     },
+    [theme.breakpoints.down('md')]: {
+      padding: 0,
+      marginTop: 20,
+    },
   },
   sliderButton: {
     display: 'flex',
@@ -39,10 +42,8 @@ const useStyles = makeStyles((theme) => ({
   },
   sliderButtonWrapper: {
     display: 'flex !important',
+    justifyContent: 'space-between !important',
     flexWrap: 'nowrap',
-    [theme.breakpoints.down('md')]: {
-      justifyContent: 'space-between !important',
-    },
   },
 }));
 
