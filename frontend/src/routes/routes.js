@@ -8,14 +8,14 @@ import Search from '../pages/Search';
 import SerieDetail from '../pages/SerieDetail';
 
 const Routes = () => (
-    <BrowserRouter>
-        <Navbar/>
-        <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/SerieDetail" component={SerieDetail} />
-            <Route exact path="/Search" component={Search} />
-        </Switch>
-    </BrowserRouter>
+  <BrowserRouter>
+    <Navbar />
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <Route exact path="/SerieDetail" component={SerieDetail} />
+      <Route exact path="/Search" component={Search} />
+    </Switch>
+  </BrowserRouter>
 );
 
 export default Routes;

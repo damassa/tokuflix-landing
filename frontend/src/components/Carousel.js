@@ -1,10 +1,10 @@
-import React from "react";
-import Slider from "react-slick";
+import React from 'react';
+import Slider from 'react-slick';
 
-import SerieCard from "./SerieCard";
+import SerieCard from './SerieCard';
 
 import '../styles/components/carousel.css';
-import { Hidden } from "@material-ui/core";
+import { Hidden } from '@material-ui/core';
 
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
@@ -52,40 +52,40 @@ const Carousel = () => {
         breakpoint: 3840,
         settings: {
           slidesToShow: 8,
-        }
+        },
       },
       {
         breakpoint: 1920,
         settings: {
           slidesToShow: 5,
-        }
+        },
       },
       {
         breakpoint: 1600,
         settings: {
           slidesToShow: 4,
-        }
+        },
       },
       {
         breakpoint: 1200,
         settings: {
           slidesToShow: 3,
-        }
+        },
       },
       {
         breakpoint: 800,
         settings: {
           slidesToShow: 2,
-        }
+        },
       },
       {
         breakpoint: 535,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
@@ -102,6 +102,6 @@ const Carousel = () => {
       <SerieCard />
     </Slider>
   );
-}
+};
 
 export default Carousel;

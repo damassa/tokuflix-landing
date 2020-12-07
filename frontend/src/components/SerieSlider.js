@@ -1,13 +1,11 @@
 import { Hidden } from '@material-ui/core';
-import SliderCard from '../components/SliderCard';
 import React from 'react';
 import Slider from 'react-slick';
 
-import '../styles/components/serieSlider';
-import useStyles from '../styles/components/serieSlider';
-
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import useStyles from '../styles/components/serieSlider';
+import SliderCard from './SliderCard';
 
 function SampleNextArrow(props) {
   const { className, onClick } = props;
