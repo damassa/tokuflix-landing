@@ -38,7 +38,10 @@ export default function SerieDetail() {
             key={serie.id}
             name={serie.name}
             year={serie.year}
+            category={serie.category}
             plot={serie.plot}
+            imageBG={serie.imageBG}
+            duration={serie.duration}
           />
         ))}
       </Grid>
