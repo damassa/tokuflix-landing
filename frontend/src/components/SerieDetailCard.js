@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const SerieDetailCard = (props) => {
+export default function SerieDetailCard(props) {
   const { name, year, plot } = props;
 
   return (
@@ -10,6 +11,10 @@ const SerieDetailCard = (props) => {
       {plot}
     </div>
   );
-};
+}
 
-export default SerieDetailCard;
+SerieDetailCard.propTypes = {
+  name: PropTypes.string.isRequired,
+  year: PropTypes.string.isRequired,
+  plot: PropTypes.string.isRequired,
+};

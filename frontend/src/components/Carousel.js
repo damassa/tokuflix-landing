@@ -1,13 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Slider from 'react-slick';
-
-import SerieCard from './SerieCard';
 
 import '../styles/components/carousel.css';
 import { Hidden } from '@material-ui/core';
 
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+
+import SerieCard from './SerieCard';
 
 function SampleNextArrow(props) {
   const { className, onClick } = props;
@@ -105,3 +106,13 @@ const Carousel = () => {
 };
 
 export default Carousel;
+
+SamplePrevArrow.propTypes = {
+  className: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
+};
+
+SampleNextArrow.propTypes = {
+  className: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
+};

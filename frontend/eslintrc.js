@@ -4,7 +4,6 @@ module.exports = {
     es6: true,
     jest: true,
   },
-  parser: 'babel-eslit',
   extends: ['airbnb', 'prettier', 'prettier/react'],
   globals: {
     Atomics: 'readonly',

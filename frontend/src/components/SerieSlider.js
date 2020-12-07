@@ -1,5 +1,6 @@
 import { Hidden } from '@material-ui/core';
 import React from 'react';
+import PropTypes from 'prop-types';
 import Slider from 'react-slick';
 
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
@@ -61,3 +62,13 @@ const SerieSlider = () => {
 };
 
 export default SerieSlider;
+
+SamplePrevArrow.propTypes = {
+  className: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
+};
+
+SampleNextArrow.propTypes = {
+  className: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
+};

@@ -22,7 +22,7 @@ export default function SerieDetail() {
       })
 
       .catch((err) => {
-        console.log(err);
+        return err;
       });
   };
 

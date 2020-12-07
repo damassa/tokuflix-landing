@@ -44,8 +44,8 @@ export default function UserOptions() {
                 <div className="user-options-container">
                   <strong>Damassa</strong>
                   <div className="user-options-content">
-                    <a href="#">Minha conta</a>
-                    <a href="#">Sair</a>
+                    <a href="/">Minha conta</a>
+                    <a href="/">Sair</a>
                   </div>
                 </div>
               </Paper>
