@@ -23,9 +23,11 @@ const useStyles = makeStyles(() => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "flex-end",
+    color: "#FEFEFE",
+    fontWeight: "bold",
   },
   HeaderContent: {
-    padding: "20px 0 30px 0",
+    padding: "40px 0 50px 0",
     "& h3": {
       color: "#FEFEFE",
       fontSize: 28,
@@ -39,6 +41,7 @@ const useStyles = makeStyles(() => ({
       border: "none",
       cursor: "pointer",
       transition: ".2s",
+      marginTop: 20,
     },
     "& button:hover": {
       backgroundColor: "#CCCCCC",
