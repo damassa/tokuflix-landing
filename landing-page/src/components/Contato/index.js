@@ -14,7 +14,7 @@ const Contato = () => {
           <Grid item xs={10}>
             <Grid container>
               <Grid item xs={12} className={classes.ContatoDividerTitle}>
-                Title
+                Entre em contato!
               </Grid>
               <Grid item xs={12} className={classes.ContatoDividerForm}>
                 <img src={Image} alt="Form" />

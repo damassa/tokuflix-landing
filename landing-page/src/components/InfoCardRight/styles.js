@@ -6,7 +6,7 @@ const useStyles = makeStyles(() => ({
     padding: "25px 0",
     color: "#505050",
     "& img": {
-      width: "100%",
+      width: "60%",
     },
   },
 }));

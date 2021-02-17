@@ -4,7 +4,7 @@ import Image from "../../assets/undraw_monitor_iqpq.svg";
 
 import useStyles from "./styles";
 
-const InfoCardLeft = () => {
+const InfoCardLeft = (props) => {
   const classes = useStyles();
   return (
     <Grid container>
@@ -16,14 +16,10 @@ const InfoCardLeft = () => {
           className={classes.InfoCardLeft}
         >
           <Grid item xs={4}>
-            <img src={Image} alt="Site" />
+            <img src={`${props.ContentImage}`} alt="Site" />
           </Grid>
           <Grid item xs={6}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-            fringilla feugiat massa, quis tincidunt elit iaculis vel. Vivamus
-            luctus ipsum vel condimentum vulputate. Aliquam condimentum massa
-            ex, vitae condimentum urna rutrum id. Maecenas tempus porttitor
-            enim, nec molestie nibh ullamcorper a.
+            {props.ContentText}
           </Grid>
         </Grid>
       </Grid>
