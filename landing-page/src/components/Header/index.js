@@ -18,7 +18,7 @@ const Header = () => {
               <Grid item xs={6}>
                 <Grid container justify="flex-end">
                   <Grid item xs={1} className={classes.MenuItem}>
-                    Contato
+                    <a href="#contato">Contato</a>
                   </Grid>
                   <Grid item xs={2} className={classes.MenuItem}>
                     <button>Login</button>

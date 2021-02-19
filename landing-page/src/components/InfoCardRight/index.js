@@ -1,6 +1,5 @@
 import React from "react";
 import { Grid } from "@material-ui/core";
-import Image from "../../assets/undraw_monitor_iqpq.svg";
 
 import useStyles from "./styles";
 
@@ -16,6 +15,7 @@ const InfoCardRight = (props) => {
           className={classes.InfoCardRight}
         >
           <Grid item xs={6}>
+            <h1>{props.ContentTitle}</h1>
             {props.ContentText}
           </Grid>
           <Grid item xs={4}>

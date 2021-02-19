@@ -11,7 +11,6 @@ const useStyles = makeStyles(() => ({
     color: "#FEFEFE",
     "& button": {
       borderRadius: 100,
-      border: "none",
       border: "#FEFEFE 1px solid",
       cursor: "pointer",
       padding: "10px 30px",
@@ -32,8 +31,11 @@ const useStyles = makeStyles(() => ({
     "& a": {
       color: "#FEFEFE",
     },
+    "& span": {
+      fontSize: 12,
+    },
   },
-  cu: {
+  Social: {
     display: "flex",
     justifyContent: "space-evenly",
   },

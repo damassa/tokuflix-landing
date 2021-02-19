@@ -29,9 +29,9 @@ const Footer = () => {
               className={classes.FooterContentBottom}
             >
               <Grid item xs={4}>
-                World of Tokusatsu.
+                World of Tokusatsu. <span>All rights reserved.</span>
               </Grid>
-              <Grid className={classes.cu} item xs={3}>
+              <Grid className={classes.Social} item xs={2}>
                 <a
                   title="Quantum Lab"
                   rel="noreferrer"
