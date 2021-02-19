@@ -8,6 +8,9 @@ const useStyles = makeStyles(() => ({
     "& img": {
       width: "60%",
     },
+    "& h1": {
+      color: "#686ac9",
+    },
   },
 }));
 

@@ -1,8 +1,8 @@
 import React from "react";
 import { Grid } from "@material-ui/core";
-import Image from "../../assets/undraw_in_progress_ql66.svg";
 
 import useStyles from "./styles";
+import FormContato from "../FormContato";
 
 const Contato = () => {
   const classes = useStyles();
@@ -16,8 +16,13 @@ const Contato = () => {
               <Grid item xs={12} className={classes.ContatoDividerTitle}>
                 Entre em contato!
               </Grid>
-              <Grid item xs={12} className={classes.ContatoDividerForm}>
-                <img src={Image} alt="Form" />
+              <Grid
+                id="contato"
+                item
+                xs={12}
+                className={classes.ContatoDividerForm}
+              >
+                <FormContato />
               </Grid>
             </Grid>
           </Grid>
