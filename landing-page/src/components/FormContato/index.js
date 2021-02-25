@@ -1,58 +1,37 @@
-import React, { useState, useEffect } from "react";
-// import axios from 'axios';
+import React, { useState } from "react";
+import { useForm } from "react-hook-form";
+import axios from "axios";
 import { Grid, TextField } from "@material-ui/core";
-import { Formik, Form, ErrorMessage } from "formik";
-import * as Yup from "yup";
-// import { FormikKey } from '../../config/keys';
+import { FormikKey } from "../../config/keys";
 
 import useStyles from "./styles";
 
-const formSchema = Yup.object().shape({
-  email: Yup.string().email("E-mail inválido").required("Campo obrigatório"),
-  message: Yup.string().required("Campo obrigatório"),
-});
-
 const FormContato = (props) => {
-  const {
-    values,
-    touched,
-    errors,
-    handleChange,
-    handleBlur,
-    handleSubmit,
-  } = props;
-
-  useEffect(() => {
-    console.log(errors);
-  }, [errors]);
-
   const classes = useStyles();
-  const [serverState, setServerState] = useState();
   const [loading, setLoading] = useState(false);
-  const [err, setErr] = useState();
+  const { handleSubmit, errors, register } = useForm();
 
-  const handleServerResponse = (ok, msg) => {
-    setServerState({ ok, msg });
+  const sendRequest = (formData) => {
+    setLoading(true);
+    axios({
+      method: "POST",
+      url: `https://formspree.io/f/${FormikKey}`,
+      data: formData,
+    })
+      .then((response) => {
+        setLoading(false);
+      })
+      .catch((error) => {
+        setLoading(false);
+      });
   };
 
-  const handleOnSubmit = (values, actions) => {
-    setLoading(true);
-    // axios({
-    //     method: "POST",
-    //     url: `https://formspree.io/f/${FormikKey}`,
-    //     data: values
-    // })
-    //     .then(response => {
-    //         actions.setSubmitting(false);
-    //         actions.resetForm();
-    //         handleServerResponse(true, "Muito obrigado!");
-    //         setLoading(false);
-    //     })
-    //     .catch(error => {
-    //         actions.setSubmitting(false);
-    //         handleServerResponse(false, error.response.data.error)
-    //         setLoading(false);
-    //     })
+  const onFormError = (err) => {
+    const objectErrors = {};
+    Object.values(err).map((value) => {
+      objectErrors[value.ref.name] = value.message;
+      return value;
+    });
   };
   return (
     <Grid container justify="center">
@@ -60,37 +39,57 @@ const FormContato = (props) => {
         <Grid container justify="space-between" spacing={3}>
           <Grid item xs={6}>
             <TextField
-              id="name"
-              type="text"
+              inputRef={register({
+                required: "Este campo é obrigatório",
+              })}
+              inputProps={{ maxLength: 30 }}
+              variant="outlined"
+              required
+              fullWidth
+              disabled={loading}
+              error={!!errors.name}
+              helperText={errors.name?.message || false}
               name="name"
               label="Nome"
-              variant="outlined"
-              disabled={loading}
-              helperText
-              fullWidth
+              type="text"
             />
           </Grid>
           <Grid item xs={6}>
             <TextField
-              id="email"
-              type="email"
+              inputRef={register({
+                required: "Este campo é obrigatório",
+                pattern: {
+                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$/i,
+                  message: "Forneça um email válido",
+                },
+              })}
+              inputProps={{ maxLength: 150 }}
+              variant="outlined"
+              required
+              fullWidth
+              disabled={loading}
+              error={!!errors.email}
+              helperText={errors.email?.message || false}
               name="email"
               label="E-mail"
-              variant="outlined"
-              disabled={loading}
-              helperText
-              fullWidth
+              type="text"
             />
           </Grid>
           <Grid item xs={12}>
             <TextField
-              id="message"
-              name="message"
-              label="Mensagem"
+              inputRef={register({
+                required: "Este campo é obrigatório",
+              })}
+              inputProps={{ maxLength: 150 }}
               variant="outlined"
-              disabled={loading}
-              helperText
+              required
               fullWidth
+              disabled={loading}
+              error={!!errors.message}
+              helperText={errors.message?.message || false}
+              name="message"
+              label="Escreva sua mensagem"
+              type="text"
               multiline
               rows={6}
             />
@@ -98,7 +97,13 @@ const FormContato = (props) => {
         </Grid>
         <Grid container spacing={3} justify="flex-end">
           <Grid className={classes.Button} item xs={12}>
-            <button type="submit">Submit</button>
+            <button
+              type="submit"
+              disabled={false}
+              onClick={handleSubmit(sendRequest, onFormError)}
+            >
+              Submit
+            </button>
           </Grid>
         </Grid>
       </Grid>
