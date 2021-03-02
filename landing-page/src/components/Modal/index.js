@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { useForm } from "react-hook-form";
 import { useSelector } from "react-redux";
@@ -16,14 +16,19 @@ const Modal = () => {
   // const dispatch = useDispatch();
   const { errors, register } = useForm();
   const classes = useStyles();
+  const [loading, setLoading] = useState(true);
 
-  // const onFormError = (err) => {
-  //   const objectErrors = {};
-  //   Object.values(err).map((value) => {
-  //     objectErrors[value.ref.name] = value.message;
-  //     return value;
-  //   });
-  // };
+  const onFormError = (err) => {
+    const objectErrors = {};
+    Object.values(err).map((value) => {
+      objectErrors[value.ref.name] = value.message;
+      return value;
+    });
+  };
+
+  const Register = (formData) => {
+    setLoading(true);
+  };
 
   return (
     <Dialog className={classes.modalPaper} open={appStates.openModalUser}>
@@ -54,6 +59,7 @@ const Modal = () => {
                     label="E-mail"
                     type="text"
                     fullWidth
+                    disabled={loading}
                   />
                 </Grid>
                 <Grid item xs={12}>
@@ -69,6 +75,7 @@ const Modal = () => {
                     label="Nome"
                     type="text"
                     fullWidth
+                    disabled={loading}
                   />
                 </Grid>
                 <Grid item xs={12}>
@@ -84,6 +91,8 @@ const Modal = () => {
                     label="Senha"
                     type="password"
                     fullWidth
+                    inputProps={{ minLenght: 12 }}
+                    disabled={loading}
                   />
                 </Grid>
                 <Grid
