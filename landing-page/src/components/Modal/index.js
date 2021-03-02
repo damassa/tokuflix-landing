@@ -6,6 +6,7 @@ import { Grid, TextField } from "@material-ui/core";
 
 import Dialog from "@material-ui/core/Dialog";
 import Button from "@material-ui/core/Button";
+import useStyles from "./styles";
 // import CloseIcon from '@material-ui/icons/Close';
 
 // import * as AppActions from '../../store/modules/app/actions';
@@ -14,6 +15,7 @@ const Modal = () => {
   const appStates = useSelector((state) => state.app, []);
   // const dispatch = useDispatch();
   const { errors, register } = useForm();
+  const classes = useStyles();
 
   // const onFormError = (err) => {
   //   const objectErrors = {};
@@ -24,10 +26,15 @@ const Modal = () => {
   // };
 
   return (
-    <Dialog open={appStates.openModalUser}>
+    <Dialog className={classes.modalPaper} open={appStates.openModalUser}>
       <Grid container>
         <Grid item xs={12}>
-          <Grid container justify="center">
+          <Grid
+            container
+            justify="center"
+            alignItems="center"
+            className={classes.modalPaper}
+          >
             <Grid item xs={10}>
               <Grid container spacing={1}>
                 <Grid item xs={12}>
@@ -79,12 +86,17 @@ const Modal = () => {
                     fullWidth
                   />
                 </Grid>
-                <Grid container>
-                  <Grid item xs={6}>
-                    <Button>Registrar</Button>
+                <Grid
+                  container
+                  justify="center"
+                  spaccing={2}
+                  className={classes.buttonsContainer}
+                >
+                  <Grid item xs={4}>
+                    <Button fullWidth>Registrar</Button>
                   </Grid>
-                  <Grid item xs={6}>
-                    <Button>Cancelar</Button>
+                  <Grid item xs={4}>
+                    <Button fullWidth>Cancelar</Button>
                   </Grid>
                 </Grid>
               </Grid>
