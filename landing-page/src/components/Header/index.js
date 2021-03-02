@@ -1,11 +1,17 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import { Grid } from "@material-ui/core";
+
+import * as AppActions from "../../store/modules/app/actions";
+
 import Image from "../../assets/undraw_monitor_iqpq.svg";
 
 import useStyles from "./styles";
 
 const Header = () => {
   const classes = useStyles();
+  const dispatch = useDispatch();
+
   return (
     <Grid container justify="space-between" className={classes.Header}>
       <Grid item xs={12} className={classes.HeaderNav}>
@@ -51,7 +57,11 @@ const Header = () => {
                     </p>
                   </Grid>
                   <Grid item xs={12}>
-                    <button>Criar conta</button>
+                    <button
+                      onClick={() => dispatch(AppActions.openModalUser())}
+                    >
+                      Criar conta
+                    </button>
                   </Grid>
                 </Grid>
               </Grid>

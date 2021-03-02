@@ -3,6 +3,7 @@ import Contato from "./components/Contato";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import MainContent from "./components/MainContent";
+import Modal from "./components/Modal";
 
 import { useDispatch, useSelector } from "react-redux";
 import * as AppActions from "./store/modules/app/actions.js";
@@ -22,6 +23,7 @@ function App() {
       <Header />
       <MainContent />
       <Contato />
+      <Modal />
       <Footer />
       <Snackbar
         open={appStates.snackbar.active}

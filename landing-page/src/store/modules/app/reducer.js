@@ -6,6 +6,7 @@ const initialState = {
     active: false,
     severity: "error",
   },
+  openModalUser: false,
 };
 
 /**
@@ -30,6 +31,16 @@ export default function app(state = initialState, action) {
           ...state.snackbar,
           active: false,
         };
+      });
+
+    case "@app/OPEN_MODAL_USER":
+      return produce(state, (draft) => {
+        draft.openModalUser = true;
+      });
+
+    case "@app/CLOSE_MODAL_USER":
+      return produce(state, (draft) => {
+        draft.openModalUser = false;
       });
 
     default:
