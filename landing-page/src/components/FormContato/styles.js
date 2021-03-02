@@ -6,7 +6,6 @@ const useStyles = makeStyles(() => ({
     justifyContent: "flex-end",
     "& button": {
       background: "none",
-      border: "none",
       borderRadius: 100,
       border: "1px solid",
       padding: "10px 30px",
