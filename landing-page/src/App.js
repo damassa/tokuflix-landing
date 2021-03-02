@@ -13,9 +13,9 @@ import Alert from "@material-ui/lab/Alert";
 function App() {
   const dispatch = useDispatch();
 
-  const snackbar = useSelector((state) => state.app, []);
+  const appStates = useSelector((state) => state.app, []);
 
-  console.log(snackbar.snackbar.active);
+  console.log(appStates.snackbar.active);
 
   return (
     <div className="App">
@@ -24,17 +24,17 @@ function App() {
       <Contato />
       <Footer />
       <Snackbar
-        open={snackbar.snackbar.active}
+        open={appStates.snackbar.active}
         autoHideDuration={8000}
         onClose={() => dispatch(AppActions.closeSnackbar())}
         anchorOrigin={{ vertical: "top", horizontal: "left" }}
       >
         <Alert
           variant="filled"
-          severity={snackbar.snackbar.severity}
+          severity={appStates.snackbar.severity}
           onClose={() => dispatch(AppActions.closeSnackbar())}
         >
-          <Typography>{snackbar.snackbar.message}</Typography>
+          <Typography>{appStates.snackbar.message}</Typography>
         </Alert>
       </Snackbar>
     </div>
