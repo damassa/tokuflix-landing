@@ -6,10 +6,15 @@ import { FormikKey } from "../../config/keys";
 
 import useStyles from "./styles";
 
-const FormContato = (props) => {
+import { useDispatch } from "react-redux";
+import * as AppActions from "../../store/modules/app/actions";
+
+const FormContato = () => {
   const classes = useStyles();
   const [loading, setLoading] = useState(false);
   const { handleSubmit, errors, register } = useForm();
+
+  const dispatch = useDispatch();
 
   const sendRequest = (formData) => {
     setLoading(true);
@@ -18,10 +23,16 @@ const FormContato = (props) => {
       url: `https://formspree.io/f/${FormikKey}`,
       data: formData,
     })
-      .then((response) => {
+      .then(() => {
+        dispatch(
+          AppActions.openSnackbar("Mensagem enviada com sucesso!", "success")
+        );
         setLoading(false);
       })
-      .catch((error) => {
+      .catch(() => {
+        dispatch(
+          AppActions.openSnackbar("Erro ao enviar a mensagem!", "error")
+        );
         setLoading(false);
       });
   };
