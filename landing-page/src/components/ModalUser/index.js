@@ -90,7 +90,12 @@ const ModalUser = () => {
                 <Button fullWidth>Cadastrar</Button>
               </Grid>
               <Grid item xs={5}>
-                <Button fullWidth>Cancelar</Button>
+                <Button
+                  fullWidth
+                  onClick={() => dispatch(AppActions.closeModalUser())}
+                >
+                  Cancelar
+                </Button>
               </Grid>
             </Grid>
           </Grid>
