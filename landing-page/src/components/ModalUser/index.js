@@ -1,13 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 
-// import { useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { useSelector, useDispatch } from "react-redux";
 import { Modal, Fade, Grid, TextField, Button } from "@material-ui/core";
-import { useForm } from "react-hook-form";
-// import Dialog from "@material-ui/core/Dialog";
-// import Button from "@material-ui/core/Button";
+
 import useStyles from "./styles";
-// import CloseIcon from '@material-ui/icons/Close';
 
 import * as AppActions from "../../store/modules/app/actions";
 
@@ -15,7 +12,20 @@ const ModalUser = () => {
   const classes = useStyles();
   const appStates = useSelector((state) => state.app, []);
   const dispatch = useDispatch();
+  const [loading, setLoading] = useState(false);
   const { handleSubmit, errors, register } = useForm();
+
+  const Register = (formData) => {
+    setLoading(true);
+  };
+
+  const onFormError = (err) => {
+    const objectErrors = {};
+    Object.values(err).map((value) => {
+      objectErrors[value.ref.name] = value.message;
+      return value;
+    });
+  };
 
   return (
     <Modal
@@ -42,13 +52,13 @@ const ModalUser = () => {
               })}
               variant="outlined"
               required
-              // error={!!errors.email}
-              // helperText={errors.email?.message || false}
+              error={!!errors.email}
+              helperText={errors.email?.message || false}
               name="email"
               label="E-mail"
               type="text"
               fullWidth
-              // disabled={loading}
+              disabled={loading}
             />
           </Grid>
           <Grid item xs={12}>
@@ -58,13 +68,13 @@ const ModalUser = () => {
               })}
               variant="outlined"
               required
-              // error={!!errors.name}
-              // helperText={errors.name?.message || false}
+              error={!!errors.name}
+              helperText={errors.name?.message || false}
               name="name"
               label="Nome"
               type="text"
               fullWidth
-              // disabled={loading}
+              disabled={loading}
             />
           </Grid>
           <Grid item xs={12}>
@@ -74,20 +84,26 @@ const ModalUser = () => {
               })}
               variant="outlined"
               required
-              // error={!!errors.password}
-              // helperText={errors.password?.message || false}
+              error={!!errors.password}
+              helperText={errors.password?.message || false}
               name="senha"
               label="Senha"
               type="password"
               fullWidth
               inputProps={{ minLenght: 12 }}
-              // disabled={loading}
+              disabled={loading}
             />
           </Grid>
           <Grid item xs={12}>
             <Grid container justify="center" spacing={2}>
               <Grid item xs={5}>
-                <Button fullWidth>Cadastrar</Button>
+                <Button
+                  fullWidth
+                  disabled={false}
+                  onClick={handleSubmit(Register, onFormError)}
+                >
+                  Cadastrar
+                </Button>
               </Grid>
               <Grid item xs={5}>
                 <Button
