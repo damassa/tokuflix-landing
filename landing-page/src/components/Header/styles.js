@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   Header: {
     backgroundImage:
       "linear-gradient(to right bottom, #0082c1, #2b7cc7, #4b74ca, #686ac9, #845ec2)",
@@ -35,9 +35,21 @@ const useStyles = makeStyles(() => ({
     "& h3": {
       color: "#FEFEFE",
       fontSize: 28,
+      [theme.breakpoints.down("md")]: {
+        textAlign: "center",
+      },
+      [theme.breakpoints.down("sm")]: {
+        textAlign: "justify",
+      },
     },
     "& p": {
       color: "#C4C4C4",
+      [theme.breakpoints.down("md")]: {
+        textAlign: "center",
+      },
+      [theme.breakpoints.down("sm")]: {
+        textAlign: "justify",
+      },
     },
     "& button": {
       padding: "10px 30px",
@@ -50,6 +62,11 @@ const useStyles = makeStyles(() => ({
     "& button:hover": {
       backgroundColor: "#CCCCCC",
       transition: ".2s",
+    },
+  },
+  registerButton: {
+    [theme.breakpoints.down("md")]: {
+      justifyContent: "center",
     },
   },
   HeaderImage: {
