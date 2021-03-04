@@ -8,16 +8,11 @@ const InfoCardLeft = (props) => {
   return (
     <Grid container>
       <Grid item xs={12}>
-        <Grid
-          container
-          justify="space-between"
-          alignItems="center"
-          className={classes.InfoCardLeft}
-        >
-          <Grid item xs={4}>
+        <Grid container className={classes.InfoCardLeft}>
+          <Grid item lg={4} md={12}>
             <img src={`${props.ContentImage}`} alt="Site" />
           </Grid>
-          <Grid item xs={6}>
+          <Grid item lg={6} md={12}>
             <h1>{props.ContentTitle}</h1>
             {props.ContentText}
           </Grid>
