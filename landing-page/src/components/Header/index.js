@@ -1,11 +1,18 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import { Grid } from "@material-ui/core";
+import Hidden from "@material-ui/core/Hidden";
+
+import * as AppActions from "../../store/modules/app/actions";
+
 import Image from "../../assets/undraw_monitor_iqpq.svg";
 
 import useStyles from "./styles";
 
 const Header = () => {
   const classes = useStyles();
+  const dispatch = useDispatch();
+
   return (
     <Grid container justify="space-between" className={classes.Header}>
       <Grid item xs={12} className={classes.HeaderNav}>
@@ -33,7 +40,7 @@ const Header = () => {
         <Grid container justify="center">
           <Grid item xs={10}>
             <Grid container justify="center" alignItems="center">
-              <Grid item xs={5}>
+              <Grid item lg={5} md={12}>
                 <Grid container>
                   <Grid item xs={12}>
                     <h3>
@@ -51,12 +58,20 @@ const Header = () => {
                     </p>
                   </Grid>
                   <Grid item xs={12}>
-                    <button>Criar conta</button>
+                    <Grid container className={classes.registerButton}>
+                      <button
+                        onClick={() => dispatch(AppActions.openModalUser())}
+                      >
+                        Criar conta
+                      </button>
+                    </Grid>
                   </Grid>
                 </Grid>
               </Grid>
-              <Grid item xs={7} className={classes.HeaderImage}>
-                <img src={Image} alt="TV Series" />
+              <Grid item lg={7} className={classes.HeaderImage}>
+                <Hidden mdDown>
+                  <img src={Image} alt="TV Series" />
+                </Hidden>
               </Grid>
             </Grid>
           </Grid>
