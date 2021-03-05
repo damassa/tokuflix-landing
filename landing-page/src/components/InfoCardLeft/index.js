@@ -14,7 +14,7 @@ const InfoCardLeft = (props) => {
           </Grid>
           <Grid item lg={6} md={12}>
             <h1>{props.ContentTitle}</h1>
-            {props.ContentText}
+            <p>{props.ContentText}</p>
           </Grid>
         </Grid>
       </Grid>

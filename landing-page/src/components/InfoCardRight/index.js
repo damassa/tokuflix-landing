@@ -11,7 +11,7 @@ const InfoCardRight = (props) => {
         <Grid container className={classes.InfoCardRight}>
           <Grid item lg={6} md={12}>
             <h1>{props.ContentTitle}</h1>
-            {props.ContentText}
+            <p>{props.ContentText}</p>
           </Grid>
           <Grid item lg={4} md={12}>
             <img src={`${props.ContentImage}`} alt="Site" />

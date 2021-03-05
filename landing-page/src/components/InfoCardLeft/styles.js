@@ -21,6 +21,11 @@ const useStyles = makeStyles((theme) => ({
     "& h1": {
       color: "#686ac9",
     },
+    "& p": {
+      [theme.breakpoints.down("sm")]: {
+        textAlign: "justify",
+      },
+    },
   },
 }));
 
