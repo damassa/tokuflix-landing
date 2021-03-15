@@ -48,7 +48,7 @@ const FormContato = () => {
     <Grid container justify="center">
       <Grid item xs={10}>
         <Grid container justify="space-between" spacing={3}>
-          <Grid item xs={6}>
+          <Grid item md={6} xs={12}>
             <TextField
               inputRef={register({
                 required: "Este campo é obrigatório",
@@ -65,7 +65,7 @@ const FormContato = () => {
               type="text"
             />
           </Grid>
-          <Grid item xs={6}>
+          <Grid item md={6} xs={12}>
             <TextField
               inputRef={register({
                 required: "Este campo é obrigatório",
@@ -113,7 +113,7 @@ const FormContato = () => {
               disabled={false}
               onClick={handleSubmit(sendRequest, onFormError)}
             >
-              Submit
+              Enviar
             </button>
           </Grid>
         </Grid>
