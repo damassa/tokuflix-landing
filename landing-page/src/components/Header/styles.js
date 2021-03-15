@@ -10,13 +10,17 @@ const useStyles = makeStyles((theme) => ({
     "& button": {
       padding: "5px 20px",
       borderRadius: 100,
-      border: "none",
       cursor: "pointer",
-      transition: ".2s",
+      transition: ".3s",
+      background: "none",
+      color: "#FEFEFE",
+      border: "1px solid #FEFEFE",
     },
     "& button:hover": {
-      backgroundColor: "#CCCCCC",
-      transition: ".2s",
+      backgroundColor: "#FEFEFE",
+      transition: ".3s",
+      color: "#505050",
+      border: "1px solid #FEFEFE transparent",
     },
   },
   MenuItem: {
@@ -29,6 +33,9 @@ const useStyles = makeStyles((theme) => ({
       color: "#FEFEFE",
       textDecoration: "none",
     },
+  },
+  IconLink: {
+    fontSize: 24,
   },
   HeaderContent: {
     padding: "40px 0 50px 0",

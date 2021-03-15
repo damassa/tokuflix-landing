@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { Grid } from "@material-ui/core";
+import { FiMail } from "react-icons/fi";
 import Hidden from "@material-ui/core/Hidden";
 
 import * as AppActions from "../../store/modules/app/actions";
@@ -25,7 +26,14 @@ const Header = () => {
               <Grid item xs={6}>
                 <Grid container justify="flex-end">
                   <Grid item xs={1} className={classes.MenuItem}>
-                    <a href="#contato">Contato</a>
+                    <Hidden mdDown>
+                      <a href="#contato">Contato</a>
+                    </Hidden>
+                    <Hidden lgUp>
+                      <a className={classes.IconLink} href="#contato">
+                        <FiMail />
+                      </a>
+                    </Hidden>
                   </Grid>
                   <Grid item xs={2} className={classes.MenuItem}>
                     <button>Login</button>
