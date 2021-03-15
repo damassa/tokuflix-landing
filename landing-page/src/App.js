@@ -2,6 +2,7 @@ import React from "react";
 import Contato from "./components/Contato";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Login from "./components/Login";
 import MainContent from "./components/MainContent";
 import ModalUser from "./components/ModalUser";
 
@@ -21,6 +22,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <Login />
       <MainContent />
       <Contato />
       <ModalUser />

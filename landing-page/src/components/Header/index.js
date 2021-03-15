@@ -36,7 +36,9 @@ const Header = () => {
                     </Hidden>
                   </Grid>
                   <Grid item xs={2} className={classes.MenuItem}>
-                    <button>Login</button>
+                    <button onClick={() => dispatch(AppActions.openLogin())}>
+                      Login
+                    </button>
                   </Grid>
                 </Grid>
               </Grid>
