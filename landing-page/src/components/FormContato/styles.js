@@ -1,9 +1,13 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   Button: {
     display: "flex",
     justifyContent: "flex-end",
+    [theme.breakpoints.down("md")]: {
+      justifyContent: "center",
+      marginTop: 15,
+    },
     "& button": {
       background: "none",
       borderRadius: 100,

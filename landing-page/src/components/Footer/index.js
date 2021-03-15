@@ -7,19 +7,15 @@ import useStyles from "./styles";
 const Footer = () => {
   const classes = useStyles();
   return (
-    <Grid container className={classes.Footer}>
-      <Grid item xs={12}>
+    <Grid container justify="space-between" className={classes.Footer}>
+      <Grid item xs={12} className={classes.FooterContent}>
         <Grid container justify="center">
           <Grid item xs={10}>
-            <Grid
-              container
-              justify="space-between"
-              className={classes.FooterContent}
-            >
-              <Grid item xs={6}>
+            <Grid container justify="space-between">
+              <Grid item md={6} xs={12}>
                 Assista suas séries favoritas.
               </Grid>
-              <Grid item xs={2}>
+              <Grid item md={2} xs={12} className={classes.FooterAlign}>
                 <button>Registre-se</button>
               </Grid>
             </Grid>
@@ -28,20 +24,32 @@ const Footer = () => {
               justify="space-between"
               className={classes.FooterContentBottom}
             >
-              <Grid item xs={4}>
-                World of Tokusatsu. <span>All rights reserved.</span>
+              <Grid item md={6} xs={12}>
+                World of Tokusatsu. All rights reserved.
               </Grid>
-              <Grid className={classes.Social} item xs={2}>
-                <a
-                  title="Quantum Lab"
-                  rel="noreferrer"
-                  target="_blank"
-                  href="https://github.com/Lab-Quantum"
+              <Grid item md={3} xs={12}>
+                <Grid
+                  container
+                  justify="flex-end"
+                  className={classes.FooterAlign}
                 >
-                  <FiGithub />
-                </a>
-                <FiInstagram />
-                <FiLinkedin />
+                  <Grid item xs={2} md={3} className={classes.FooterAlign}>
+                    <a
+                      title="Quantum Lab"
+                      rel="noreferrer"
+                      target="_blank"
+                      href="https://github.com/Lab-Quantum"
+                    >
+                      <FiGithub />
+                    </a>
+                  </Grid>
+                  <Grid item xs={2} md={3} className={classes.FooterAlign}>
+                    <FiInstagram />
+                  </Grid>
+                  <Grid item xs={2} md={3} className={classes.FooterAlign}>
+                    <FiLinkedin />
+                  </Grid>
+                </Grid>
               </Grid>
             </Grid>
           </Grid>
