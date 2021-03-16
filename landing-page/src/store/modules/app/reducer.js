@@ -7,6 +7,7 @@ const initialState = {
     severity: "error",
   },
   openModalUser: false,
+  openLogin: false,
 };
 
 /**
@@ -41,6 +42,16 @@ export default function app(state = initialState, action) {
     case "@app/CLOSE_MODAL_USER":
       return produce(state, (draft) => {
         draft.openModalUser = false;
+      });
+
+    case "@app/OPEN_LOGIN":
+      return produce(state, (draft) => {
+        draft.openLogin = true;
+      });
+
+    case "@app/CLOSE_LOGIN":
+      return produce(state, (draft) => {
+        draft.openLogin = false;
       });
 
     default:

@@ -17,3 +17,13 @@ export const openModalUser = () => {
 export const closeModalUser = () => {
   return { type: "@app/CLOSE_MODAL_USER" };
 };
+
+/* LOGIN */
+
+export const openLogin = () => {
+  return { type: "@app/OPEN_LOGIN" };
+};
+
+export const closeLogin = () => {
+  return { type: "@app/CLOSE_LOGIN" };
+};
