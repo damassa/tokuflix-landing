@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  background: #e6e6fa;
+}
+
+body,
+input {
+  font: 600 18px Overpass, sans-serif;
+  color: #cccccc;
+}
+
+button:focus {
+  outline: none;
+}

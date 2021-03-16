@@ -1,0 +1,80 @@
+{
+    "workbench.sideBar.location": "left",
+    "peacock.color": "#832561",
+    "color-highlight.enable": true,
+    "editor.wordWrap": "on",
+    "editor.multiCursorModifier": "ctrlCmd",
+    "git.autofetch": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[latex]": {
+      "editor.defaultFormatter": "nickfo/*/de.latex-formatter"
+    },
+    "search.exclude": {
+      "**/assets": true
+    },
+    "bookmarks.showCommandsInContextMenu": true,
+    "bookmarks.navigateThroughAllFiles": true,
+    "bookmarks.wrapNavigation": true,
+    "bookmarks.saveBookmarksInProject": true,
+    "bookmarks.sideBar.expanded": true,
+    "editor.renderWhitespace": "none",
+    "window.titleBarStyle": "custom",
+    "editor.formatOnSave": true,
+    "eslint.autoFixOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "jshint.options": {
+      "esversion": 6
+    },
+    "python.linting.flake8Enabled": true,
+    "emmet.includeLanguages": {
+      "javascript": "javascriptreact"
+    },
+    "emmet.syntaxProfiles": {
+      "javascript": "jsx",
+      "php": "html"
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "prettier.useEditorConfig": false,
+    "prettier.trailingComma": "all",
+    "prettier.singleQuote": true,
+    "prettier.arrowParens": "always",
+    "editor.codeActionsOnSave": {
+      // For ESLint
+      "source.fixAll.eslint": true,
+      // For TSLint
+      "source.fixAll.tslint": true,
+      // For Stylelint
+      "source.fixAll.stylelint": true
+    },
+    "editor.snippetSuggestions": "top",
+    "editor.tabSize": 2,
+    "javascript.updateImportsOnFileMove.enabled": "never",
+    "editor.parameterHints.enabled": false,
+    "breadcrumbs.enabled": true,
+    "javascript.suggest.autoImports": false,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "workbench.colorCustomizations": {
+      "activityBar.activeBackground": "#ab307e",
+      "activityBar.activeBorder": "#25320e",
+      "activityBar.background": "#ab307e",
+      "activityBar.foreground": "#e7e7e7",
+      "activityBar.inactiveForeground": "#e7e7e799",
+      "activityBarBadge.background": "#25320e",
+      "activityBarBadge.foreground": "#e7e7e7",
+      "statusBar.background": "#832561",
+      "statusBar.foreground": "#e7e7e7",
+      "statusBarItem.hoverBackground": "#ab307e",
+      "titleBar.activeBackground": "#832561",
+      "titleBar.activeForeground": "#e7e7e7",
+      "titleBar.inactiveBackground": "#83256199",
+      "titleBar.inactiveForeground": "#e7e7e799"
+    }
+  }
+  
