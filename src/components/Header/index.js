@@ -1,14 +1,14 @@
-import React from "react";
-import { useDispatch } from "react-redux";
-import { Grid } from "@material-ui/core";
-import { FiMail } from "react-icons/fi";
-import Hidden from "@material-ui/core/Hidden";
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import { Grid } from '@material-ui/core';
+import { FiMail } from 'react-icons/fi';
+import Hidden from '@material-ui/core/Hidden';
 
-import * as AppActions from "../../store/modules/app/actions";
+import * as AppActions from '../../store/modules/app/actions';
 
-import Image from "../../assets/undraw_monitor_iqpq.svg";
+import Image from '../../assets/undraw_monitor_iqpq.svg';
 
-import useStyles from "./styles";
+import useStyles from './styles';
 
 const Header = () => {
   const classes = useStyles();
@@ -54,17 +54,15 @@ const Header = () => {
                 <Grid container>
                   <Grid item xs={12}>
                     <h3>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua.
+                      Super Sentai, Ultraman, Kamen Rider, Henshin Hero, Kyodai
+                      Hero
                     </h3>
                   </Grid>
                   <Grid item xs={12}>
                     <p>
-                      Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                      laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                      irure dolor in reprehenderit in voluptate velit esse
-                      cillum dolore eu fugiat nulla pariatur.
+                      Algumas das franquias mais famosas de Tokusatsu que você
+                      pode encontrar na plataforma. Registre-se para mais
+                      informações e séries.
                     </p>
                   </Grid>
                   <Grid item xs={12}>

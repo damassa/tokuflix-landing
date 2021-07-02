@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import { useForm } from "react-hook-form";
-import { useSelector, useDispatch } from "react-redux";
-import { Modal, Fade, Grid, TextField, Button } from "@material-ui/core";
+import { useForm } from 'react-hook-form';
+import { useSelector, useDispatch } from 'react-redux';
+import { Modal, Fade, Grid, TextField, Button } from '@material-ui/core';
 
-import useStyles from "./styles";
+import useStyles from './styles';
 
-import * as AppActions from "../../store/modules/app/actions";
+import * as AppActions from '../../store/modules/app/actions';
 
 const ModalUser = () => {
   const classes = useStyles();
@@ -39,15 +39,15 @@ const ModalUser = () => {
       <Fade in={appStates.openModalUser}>
         <Grid container justify="center" className={classes.paper} spacing={2}>
           <Grid item xs={12} className={classes.titleModal}>
-            Title Here
+            Registre-se ao World of Tokusatsu
           </Grid>
           <Grid item xs={12}>
             <TextField
               inputRef={register({
-                required: "Este campo é obrigatório",
+                required: 'Este campo é obrigatório',
                 pattern: {
                   value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$/i,
-                  message: "Forneça um e-mail válido",
+                  message: 'Forneça um e-mail válido',
                 },
               })}
               variant="outlined"
@@ -64,7 +64,7 @@ const ModalUser = () => {
           <Grid item xs={12}>
             <TextField
               inputRef={register({
-                required: "Este campo é obrigatório",
+                required: 'Este campo é obrigatório',
               })}
               variant="outlined"
               required
@@ -80,7 +80,7 @@ const ModalUser = () => {
           <Grid item xs={12}>
             <TextField
               inputRef={register({
-                required: "Este campo é obrigatório",
+                required: 'Este campo é obrigatório',
               })}
               variant="outlined"
               required

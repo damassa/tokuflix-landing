@@ -1,9 +1,9 @@
-import React from "react";
-import { Grid } from "@material-ui/core";
-import InfoCardLeft from "../InfoCardLeft";
-import InfoCardRight from "../InfoCardRight";
+import React from 'react';
+import { Grid } from '@material-ui/core';
+import InfoCardLeft from '../InfoCardLeft';
+import InfoCardRight from '../InfoCardRight';
 
-import useStyles from "./styles";
+import useStyles from './styles';
 
 const MainContent = () => {
   const classes = useStyles();
@@ -28,7 +28,7 @@ const MainContent = () => {
               />
               <InfoCardLeft
                 ContentTitle="De onde veio World of Tokusatsu?"
-                ContentText="A ideia surgiu a partir de uma pesquisa despretensiosa do idealizador. Como não foi achado um site ou ferramenta acessível para assistir, veio o desejo de se ter um lugar de fácil acesso, simples e intuitivo para quem gosta e quer assistir."
+                ContentText="Pesquisando sites com a mesma proposta, tiveram poucas referências de plataforma. A partir daí, veio o desejo de se ter um lugar de fácil acesso, simples e intuitivo para quem gosta e quer assistir."
                 ContentImage="http://1.bp.blogspot.com/-0ugxRDfQT5w/TosrA6zsbZI/AAAAAAAAARM/_epdQWZxjuI/s1600/samurai.png"
               />
             </Grid>
