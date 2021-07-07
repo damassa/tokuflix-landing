@@ -39,7 +39,7 @@ const ModalUser = () => {
       <Fade in={appStates.openModalUser}>
         <Grid container justify="center" className={classes.paper} spacing={2}>
           <Grid item xs={12} className={classes.titleModal}>
-            Registre-se ao World of Tokusatsu
+            Registre-se!
           </Grid>
           <Grid item xs={12}>
             <TextField
