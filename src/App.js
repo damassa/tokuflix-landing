@@ -1,21 +1,21 @@
-import React from "react";
-import Contato from "./components/Contato";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Login from "./components/Login";
-import MainContent from "./components/MainContent";
-import ModalUser from "./components/ModalUser";
+import React from 'react';
+import Contato from './components/Contato';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Login from './components/Login';
+import MainContent from './components/MainContent';
+import ModalUser from './components/ModalUser';
 
-import { useDispatch, useSelector } from "react-redux";
-import * as AppActions from "./store/modules/app/actions.js";
+import { useDispatch, useSelector } from 'react-redux';
+import * as AppActions from './store/modules/app/actions.js';
 
-import { Snackbar, Typography } from "@material-ui/core";
-import Alert from "@material-ui/lab/Alert";
+import { Snackbar, Typography } from '@material-ui/core';
+import Alert from '@material-ui/lab/Alert';
 
 function App() {
   const dispatch = useDispatch();
 
-  const appStates = useSelector((state) => state.app, []);
+  const appStates = useSelector((state) => state.app);
 
   console.log(appStates.snackbar.active);
 
@@ -31,7 +31,7 @@ function App() {
         open={appStates.snackbar.active}
         autoHideDuration={8000}
         onClose={() => dispatch(AppActions.closeSnackbar())}
-        anchorOrigin={{ vertical: "top", horizontal: "left" }}
+        anchorOrigin={{ vertical: 'top', horizontal: 'left' }}
       >
         <Alert
           variant="filled"

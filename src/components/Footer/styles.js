@@ -3,12 +3,12 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
   Footer: {
     backgroundImage:
-      'linear-gradient(to right bottom, #0082c1, #2b7cc7, #4b74ca, #686ac9, #845ec2)',
+      'linear-gradient(to right bottom, #0a0a0a, #5F5566, #33202A)',
   },
   FooterContent: {
     padding: '30px 0 40px 0',
     fontSize: 26,
-    color: '#FEFEFE',
+    color: '#F6F6F6',
     [theme.breakpoints.down('md')]: {
       textAlign: 'center',
     },
@@ -21,9 +21,9 @@ const useStyles = makeStyles((theme) => ({
     padding: '10px 0 20px 0',
     fontSize: 18,
     marginTop: 30,
-    color: '#FEFEFE',
+    color: '#F6F6F6',
     '& a': {
-      color: '#FEFEFE',
+      color: '#F6F6F6',
     },
     '& span': {
       fontSize: 13,
@@ -39,15 +39,15 @@ const useStyles = makeStyles((theme) => ({
     },
     '& button': {
       borderRadius: 100,
-      border: '#FEFEFE 1px solid',
+      border: '#F6F6F6 1px solid',
       cursor: 'pointer',
       padding: '10px 30px',
       background: 'none',
-      color: '#FEFEFE',
+      color: '#F6F6F6',
       transition: '.2s',
     },
     '& button:hover': {
-      backgroundColor: '#FEFEFE',
+      backgroundColor: '#F6F6F6',
       color: '#3F3F3F',
       transition: '.2s',
     },

@@ -10,7 +10,7 @@ import * as AppActions from '../../store/modules/app/actions';
 
 const ModalUser = () => {
   const classes = useStyles();
-  const appStates = useSelector((state) => state.app, []);
+  const appStates = useSelector((state) => state.app);
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(false);
   const { handleSubmit, errors, register } = useForm();
@@ -90,7 +90,7 @@ const ModalUser = () => {
               label="Senha"
               type="password"
               fullWidth
-              inputProps={{ minLenght: 12 }}
+              inputProps={{ minlenght: 12 }}
               disabled={loading}
             />
           </Grid>

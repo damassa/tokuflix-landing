@@ -1,25 +1,25 @@
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(() => ({
   ContatoDivider: {
     height: 100,
     backgroundImage:
-      "linear-gradient(to right bottom, #0082c1, #2b7cc7, #4b74ca, #686ac9, #845ec2)",
-    margin: "50px 0",
+      'linear-gradient(to right bottom, #0a0a0a, #5F5566, #33202A)',
+    margin: '50px 0',
   },
   ContatoDividerTitle: {
-    textAlign: "center",
-    padding: "30px 0",
+    textAlign: 'center',
+    padding: '30px 0',
     fontSize: 28,
-    fontWeight: "bold",
-    color: "#845ec2",
+    fontWeight: 'bold',
+    color: '#33202a',
   },
   ContatoDividerForm: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
     paddingBottom: 30,
-    "& img": {
+    '& img': {
       width: 350,
     },
   },

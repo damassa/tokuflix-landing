@@ -1,16 +1,16 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import { useForm } from "react-hook-form";
-import { useSelector, useDispatch } from "react-redux";
-import { Modal, Fade, Grid, TextField, Button } from "@material-ui/core";
+import { useForm } from 'react-hook-form';
+import { useSelector, useDispatch } from 'react-redux';
+import { Modal, Fade, Grid, TextField, Button } from '@material-ui/core';
 
-import useStyles from "./styles";
+import useStyles from './styles';
 
-import * as AppActions from "../../store/modules/app/actions";
+import * as AppActions from '../../store/modules/app/actions';
 
 const Login = () => {
   const classes = useStyles();
-  const appStates = useSelector((state) => state.app, []);
+  const appStates = useSelector((state) => state.app);
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(false);
   const { handleSubmit, errors, register } = useForm();
@@ -44,10 +44,10 @@ const Login = () => {
           <Grid item xs={12}>
             <TextField
               inputRef={register({
-                required: "Este campo é obrigatório",
+                required: 'Este campo é obrigatório',
                 pattern: {
                   value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$/i,
-                  message: "Forneça um e-mail válido",
+                  message: 'Forneça um e-mail válido',
                 },
               })}
               variant="outlined"
@@ -64,7 +64,7 @@ const Login = () => {
           <Grid item xs={12}>
             <TextField
               inputRef={register({
-                required: "Este campo é obrigatório",
+                required: 'Este campo é obrigatório',
               })}
               variant="outlined"
               required
@@ -74,7 +74,7 @@ const Login = () => {
               label="Senha"
               type="password"
               fullWidth
-              inputProps={{ minLenght: 12 }}
+              inputProps={{ minlenght: 12 }}
               disabled={loading}
             />
           </Grid>
